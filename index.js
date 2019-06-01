@@ -3,6 +3,9 @@ import $ from 'jquery';
 import './style.css';
 import './node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import './node_modules/@fortawesome/fontawesome-free/js/all';
+import App from './jsmodule/App';
+
 $(function(){
-    // alert("안녕하세요");
+    let app = new App();
 });
