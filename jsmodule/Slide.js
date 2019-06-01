@@ -24,16 +24,16 @@ export default class Slide {
 
             if (this.current < idx) { //오른쪽으로 이동
                 this.sList.eq(idx).css({"left":"100%"});
-                this.sList.eq(this.current).animate({left:"-100%"}, 1000);
                 this.sList.eq(idx).animate({left:"0%"}, 1000, () =>{
                     this.sliding = false;
                 });
+                this.sList.eq(this.current).animate({left:"-100%"}, 1000);
             }else { //왼쪽으로 이동
                 this.sList.eq(idx).css({"left":"-100%"});
-                this.sList.eq(this.current).animate({left:"100%"}, 1000);
                 this.sList.eq(idx).animate({left:"0%"}, 1000, () =>{
                     this.sliding = false;
                 });
+                this.sList.eq(this.current).animate({left:"100%"}, 1000);
             }
             this.current = idx;
         });
